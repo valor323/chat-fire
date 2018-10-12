@@ -3,7 +3,15 @@ import {db} from '../firebase';
 
 
 export const getMessages = () => dispatch => {
-    db.ref('/').on('value', (snapshot) => {
+const dbRef = db.ref('/chat-messages');
+
+    dbRef.on('value', (snapshot) => {
         console.log('db snapshot', snapshot.val())
+
+        dispatch({
+            type: types.GET_CHAT_MESSAGES,
+            messages: snapshot.val()
+        })
     })
+    return dbRef;
 }
