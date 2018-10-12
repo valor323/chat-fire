@@ -1,0 +1,10 @@
+export default {
+       firebase: {
+        apiKey: "<Firebase api key>",
+        authDomain: "<Firebase auth domain>",
+        databaseURL: "<Firebase db url>",
+        projectId: "<Firebase project is>",
+        storageBucket: "<Firebase storage bucket>",
+        messagingSenderId: "<Firebase messaging sender id>"
+      }
+}
